@@ -34,7 +34,10 @@ defineProps({
                         </thead>
                         <tbody>
                             <tr v-for="item in items" :key="item.id">
-                                <td>{{ item.id }}</td>
+                                <Link class="text-blue-400" :href="route('items.show', { item:
+                                item.id })">
+                                    {{ item.id }}
+                                </Link>
                                 <td>{{ item.name }}</td>
                                 <td>{{ item.price }}</td>
                                 <td>
